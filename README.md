@@ -69,33 +69,33 @@ Follow instructions of your tutor because the procedure to submit your solution 
   - Class should ideally have a single purpose
 - Extendable code
   - Future support for different symbols...
-  - Future support for [different display types](https://en.wikiversity.org/wiki/Segment_display), e.g., three-segment displays.
+  - Future support for [different displayImpl types](https://en.wikiversity.org/wiki/Segment_display), e.g., three-segment displays.
 - All provided tests must pass
 
 
 Assignment Description
 -------------
 The goal of this homework is to implement a program which will simulate a virtual
-[(seven) segment display](https://en.wikipedia.org/wiki/Seven-segment_display) *(without the optional DP segment)*.
+[(seven) segment displayImpl](https://en.wikipedia.org/wiki/Seven-segment_display) *(without the optional DP segment)*.
 
 
 ### Supported Symbols
-In contrast to a physical segment display, printing to the console possesses certain limitations regarding the character placement.
-However, in case of the seven segment display we can make the symbol quite distinguishable while keeping a reasonable size.
+In contrast to a physical segment displayImpl, printing to the console possesses certain limitations regarding the character placement.
+However, in case of the seven segment displayImpl we can make the symbol quite distinguishable while keeping a reasonable size.
 
-When printed to stdout, a seven segment display (capable of displaying a single symbol) is formatted as follows
+When printed to stdout, a seven segment displayImpl (capable of displaying a single symbol) is formatted as follows
 
-1) The display is exactly 3 lines high 
-2) The display is exactly 3 characters wide 
+1) The displayImpl is exactly 3 lines high 
+2) The displayImpl is exactly 3 characters wide 
 3) There is no space in between adjacent displays 
 
-*Note: A display in this context means a unit capable of displaying a single symbol*
+*Note: A displayImpl in this context means a unit capable of displaying a single symbol*
 
 
 Bellow is a template of symbols supported by our application. 
 
 ```
-# Digits:  0123456789 (the empty space at the begining represents an empty display) 
+# Digits:  0123456789 (the empty space at the begining represents an empty displayImpl) 
     _     _  _     _     _  _  _ 
    | |  | _| _||_||_ |_   ||_||_|
    |_|  ||_  _|  | _||_|  ||_|  |
@@ -120,7 +120,7 @@ Part of the implementation is a command line Application which should support th
 
 | Name         | Short | Long      | Default | Description                                      | Conditions        |
 |--------------|-------|-----------|---------|--------------------------------------------------|-------------------|
-| Size         | -s    | --size    | 1       | Total size of the display (number of characters) | \>= 1             |
+| Size         | -s    | --size    | 1       | Total size of the displayImpl (number of characters) | \>= 1             |
 
 The Application should recognize the following positional arguments
 
@@ -133,7 +133,7 @@ The Application should recognize the following positional arguments
 The build descriptor is configured to produce a single runnable jar file located at `target/application.jar`. The application can be run using the following command
 
 ```
-# With no args a single empty display is  printed (3 lines of 3 spaces)
+# With no args a single empty displayImpl is  printed (3 lines of 3 spaces)
 $ java -jar application.jar
    
    
@@ -145,13 +145,13 @@ $ java -jar application.jar 5
 |_
  _|
 
-# Display given symbols on a display of size 6
+# Display given symbols on a displayImpl of size 6
 $ java -jar application.jar -s 6 01234567890E
  _     _  _     _
 | |  | _| _||_||_
 |_|  ||_  _|  | _|
 
-# Display given symbols on a display of size 12
+# Display given symbols on a displayImpl of size 12
 $ java -jar application.jar -s 12 01234567890E
  _     _  _     _     _  _  _  _  _
 | |  | _| _||_||_ |_   ||_||_|| ||_
