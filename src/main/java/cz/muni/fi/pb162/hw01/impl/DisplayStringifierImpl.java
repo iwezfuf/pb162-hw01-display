@@ -1,16 +1,17 @@
 package cz.muni.fi.pb162.hw01.impl;
 
 import cz.muni.fi.pb162.hw01.impl.displays.Display;
+import cz.muni.fi.pb162.hw01.impl.displays.DisplayStringifier;
 
 /**
  * Class that can convert a display to a string representation
  *
  * @author Martin Drazkovec, 536686
  */
-public class DisplayStringifier implements cz.muni.fi.pb162.hw01.impl.displays.DisplayStringifier {
+public class DisplayStringifierImpl implements DisplayStringifier {
     @Override
     public boolean canStringify(Display display) {
-        return display.getClass() == cz.muni.fi.pb162.hw01.impl.Display.class;
+        return display.getClass() == DisplayImpl.class;
     }
 
     @Override
@@ -18,7 +19,7 @@ public class DisplayStringifier implements cz.muni.fi.pb162.hw01.impl.displays.D
         if (!canStringify(display)) {
             return new String[] {};
         }
-        cz.muni.fi.pb162.hw01.impl.Display displayImpl = (cz.muni.fi.pb162.hw01.impl.Display) display;
+        DisplayImpl displayImpl = (DisplayImpl) display;
         String[] lines = {"", "", ""};
         for (int i = 0; i < displayImpl.getSize(); i++) {
             String[] segmentifiedChar = displayImpl.getChars()[i].getDisplayChar().segmentify();

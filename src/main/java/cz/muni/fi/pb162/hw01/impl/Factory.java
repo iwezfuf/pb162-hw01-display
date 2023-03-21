@@ -17,7 +17,7 @@ public final class Factory {
      * @return display instance
      */
     public Display display(int size) {
-        return new cz.muni.fi.pb162.hw01.impl.Display(size);
+        return new DisplayImpl(size);
     }
 
     /**
@@ -27,6 +27,6 @@ public final class Factory {
      * @return printer instance
      */
     public DisplayStringifier stringifier() {
-        return new cz.muni.fi.pb162.hw01.impl.DisplayStringifier();
+        return new DisplayStringifierImpl();
     }
 }

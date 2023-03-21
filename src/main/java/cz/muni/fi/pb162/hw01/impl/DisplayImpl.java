@@ -5,7 +5,7 @@ package cz.muni.fi.pb162.hw01.impl;
  *
  * @author Martin Drazkovec, 536686
  */
-public class Display implements cz.muni.fi.pb162.hw01.impl.displays.Display {
+public class DisplayImpl implements cz.muni.fi.pb162.hw01.impl.displays.Display {
     private final int size;
     public int getSize() {
         return size;
@@ -19,7 +19,7 @@ public class Display implements cz.muni.fi.pb162.hw01.impl.displays.Display {
      * Constructor that initializes the display with the size parameter and fill it with null characters
      * @param size size of the display
      */
-    public Display(int size) {
+    public DisplayImpl(int size) {
         this.size = size;
         this.chars = new DisplayChar[size];
         clear();

@@ -1,8 +1,8 @@
 package cz.muni.fi.pb162.hw01.impl.app;
 
 import cz.muni.fi.pb162.hw01.cmd.Application;
-import cz.muni.fi.pb162.hw01.impl.Display;
-import cz.muni.fi.pb162.hw01.impl.DisplayStringifier;
+import cz.muni.fi.pb162.hw01.impl.DisplayImpl;
+import cz.muni.fi.pb162.hw01.impl.DisplayStringifierImpl;
 import cz.muni.fi.pb162.hw01.impl.Factory;
 
 
@@ -19,10 +19,10 @@ public class DisplayApp implements Application<DisplayAppOptions> {
      */
     public int run(DisplayAppOptions options) {
         Factory factory = new Factory();
-        Display display = (Display) factory.display(options.getSize());
-        DisplayStringifier displayStringifier = (DisplayStringifier) factory.stringifier();
-        display.set(options.getText());
-        System.out.println(displayStringifier.asString(display));
+        DisplayImpl displayImpl = (DisplayImpl) factory.display(options.getSize());
+        DisplayStringifierImpl displayStringifierImpl = (DisplayStringifierImpl) factory.stringifier();
+        displayImpl.set(options.getText());
+        System.out.println(displayStringifierImpl.asString(displayImpl));
         return 1;
     }
 }
